@@ -9,7 +9,7 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Use Node 12.x
@@ -19,11 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Set name
-        run: git config --global user.email "you@example.com"
+        run: git config --global user.email "troll.rar@gmail.com"
       - name: Set name
         run: git config --global user.name "Workflow"
       - name: Deploy
-        run: npm run deploy --repo=https://github.com/trollrar/calc-tamia.git
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+        run: npm run deploy
