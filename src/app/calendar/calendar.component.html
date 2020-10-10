@@ -1,0 +1,29 @@
+<h1>KOLEDAR</h1>
+
+<div class="month">
+  <ul>
+    <li (click)="formulazapremikleta(-1)" class="prev">&#10094;</li>
+    <li (click)="formulazapremikleta(1)" class="next">&#10095;</li>
+    <li>
+      {{monthnames[month]}}<br>
+      <span style="font-size:18px">{{year}}</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Pon</li>
+  <li>Tor</li>
+  <li>Sre</li>
+  <li>Čet</li>
+  <li>Pet</li>
+  <li>Sob</li>
+  <li>Ned</li>
+</ul>
+
+<ul class="days">
+  <li *ngFor="let i of emptyDays(month, year)"></li>
+  <li *ngFor="let i of daysInMonth(month, year)">{{i}}</li>
+</ul>
+
+<p>calender works!</p>

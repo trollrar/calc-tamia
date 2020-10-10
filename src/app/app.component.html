@@ -1,8 +1,11 @@
-<p><label >TT(kg):</label><input type="number" [(ngModel)]="tt" name="telesna teža"></p>
-<label >TV(m):</label>
-<input type="number" [(ngModel)]="tv" name="telesna višina">
-<p><button type="button" (click)="formulaZaIzracun()">Izračunaj ITM!</button></p>
-<label >ITM: {{itm}}</label>
+<nav>
+  <ul>
+    <li><a routerLink="">domov</a></li>
+    <li><a routerLink="kalkulator">kalkulator</a></li>
+    <li><a routerLink="koledar">koledar</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
 
 
 
